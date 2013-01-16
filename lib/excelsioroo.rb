@@ -1,7 +1,7 @@
 require 'roo'
 require 'json'
 
-class SpreadsheetParser
+class Excelsioroo
   attr_reader :spreadsheet
   
   def initialize filename, sheet = nil
@@ -36,7 +36,3 @@ class SpreadsheetParser
   end
 
 end
-
-parser = SpreadsheetParser.new(ARGV[0])
-parser.get_data ARGV[1], ARGV[2], ARGV[3], ARGV[4]
-

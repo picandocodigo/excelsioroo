@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'excelsioroo'
+
+Excelsioroo.new(ARGV[0]).get_data ARGV[1], ARGV[2], ARGV[3], ARGV[4]
