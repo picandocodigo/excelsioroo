@@ -19,15 +19,15 @@ class SpreadsheetParser
     when /.ods/
       document = Openoffice.new filename
     end
-    return document
+    document
   end
 
-  def get_data startColumn, startRow, endColumn, endRow
-    data = []
-    rows = []
+  def get_data start_column, start_row, end_column, end_row
+    data, rows = [], []
+
     # Traverse the rows and columns
-    startRow.to_i.upto endRow.to_i do |row|
-      startColumn.upto endColumn do |column|
+    start_row.to_i.upto end_row.to_i do |row|
+      start_column.upto end_column do |column|
         data << "#{@spreadsheet.cell(row, column)} "
       end
       rows << data
